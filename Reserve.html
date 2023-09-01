@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reserve</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/reserve_style.css">
+    <link rel = "icon" href = "../images/logo.jpg" type = "image/x-icon">
+</head>
+<body>
+    <section>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/logo.jpg">
+            </div>
+        <ul class="menu">
+            <li><a href="../HTML/index.html">Home</a></li>
+            <li><a href="../HTML/Reserve.html">Reserve</a></li>
+            <li><a href="../HTML/admin-login.html">Admin</a></li>
+            <li><a href="../HTML/offer.html">Offers</a></li>
+        </ul>
+        </nav>
+    </section>
+
+    <section>
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row register-form">
+                                <div class="main-form">
+                                    <center>
+                                    <form method="post" autocomplete="off" name="google-sheet">
+                                        <div class="form-group"><br>
+                                            <label>Enter your Full Name</label><br>
+                                            <input type="text" name="Name" class="form-control" value="" required=""/><br><br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Enter your Email</label><br>
+                                            <input type="text" name="Email" class="form-control" value="" required=""/><br><br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Enter your Phone Number</label><br>
+                                            <input type="number" name="Phone" class="form-control" value="" required=""/><br><br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Select Destination Address</label><br>
+                                            <select name="DestinationAddress" class="form-control" value="" required=""/><br><br>
+                                                <option value="Manila, Philippines">Manila, Philippines</option>
+                                                <option value="Taipei, Taiwan">Taipei, Taiwan</option>
+                                                <option value="Tokyo, Japan">Tokyo, Japan</option>
+                                                <option value="Beijing, China">Beijing, China</option>
+                                                <option value="Jakarta, Indonesia">Jakarta, Indonesia</option>
+                                                <option value="Kuala Lumpur, Malaysia">Kuala Lumpur, Malaysia</option>
+                                                <option value="Singapore, Singapore">Singapore, Singapore</option>
+                                                <option value="Naypyidaw, Myanmar">Naypyidaw, Myanmar</option>
+                                                <option value="Phnom Penh, Cambodia">Phnom Penh, Cambodia</option>
+                                                <option value="Vientiane, Laos">Vientiane, Laos</option>
+                                                <option value="New Delhi, India">New Delhi, India</option>
+                                                <option value="Hanoi, Vietnam">Hanoi, Vietnam</option>
+                                                <option value="Bandar Seri Begawan, Brunei">Bandar Seri Begawan, Brunei</option>
+                                                <option value="Bangkok, Thailand">Bangkok, Thailand</option>
+                                                <option value="Dili, Timor-Leste">Dili, Timor-Leste</option>
+                                            </select>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <label>Flight Schedule</label><br>
+                                            <input type="date" name="FlightSchedule" class="form-control" value="" required=""/><br><br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Payment Method</label><br>
+                                            <select name="PayMethod" class="form-control"value="" required=""/>
+                                                <option value="Visa">Visa</option>
+                                                <option value="GCash">GCash</option>
+                                                <option value="PayMaya">PayMaya</option>
+                                                <option value="BDO">BDO</option>
+                                                <option value="BPI">BPI</option>
+                                            </select><br><br>
+                                        </div>
+                                        <div class="form-group"><br>
+                                            <button type="submit" name="submit" class="btnSubmit-btn-block">Submit Form</button>
+                                        </div>
+
+                                        <p>Note: To update/cancel your Flight Reservation, Reach us <a href="https://formsubmit.co/el/tayeca">Here</a></p>
+                                    </form>
+                                </center>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyrx5jTdXWU7X-6LURxUGqRS7eG1rNFzp6Z5I2J_bg-XYFalNAOHKOHJgrBEaXVKjirVA/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Reservation Successfully"))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

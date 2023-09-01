@@ -1,0 +1,195 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+body{
+  background-color: #2b2b2b;
+}
+html {
+  font-size: 62.5%;
+}
+*:not(i) {
+  font-family: "Poppins", sans-serif;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #2b2b2b;
+  padding: 0.5rem 2rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+nav img{
+  width: 20%;
+  border-radius: 100%;
+}
+nav ul a {
+  color: #fff;
+  font-weight: 600;
+}
+nav ul a:hover {
+  color: #41b879;
+  border-bottom: 2px solid #41b879;
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #FFF;
+}
+#menu {
+  display: none;
+}
+nav ul.active {
+  left: 0;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+  html {
+      font-size: 56.25%;
+  }
+  header {
+      padding: 2.2rem 5rem;
+  }
+  }
+@media only screen and (max-width: 767px) {
+  html {
+      font-size: 50%;
+  }
+  #home h1{
+      font-size: 20px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 8px;
+      margin-bottom: 20px;
+      background: yellowgreen;
+      position: relative;
+      animation: text 3s 1;
+      }
+  #menu {
+      display: block;
+      color: #41b879;
+        
+  }
+  nav a #logo,#menu {
+      font-size: 3.2rem;
+  }
+
+  nav a img{
+      width: 25%;
+  }
+  nav ul {
+      background-color: #41b879;
+      position: fixed;
+      left: -100vw;
+      top: 63.6px;
+      width: 30vw;
+      height: calc(100vh - 10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:right;
+      transition: .5s;
+      gap: 0;
+  }
+  nav ul a {
+      color: #2b2b2b;
+  }
+  nav ul a:hover{
+    color: #ffffff;
+  }
+  nav ul li {
+    padding-top: 40px;
+}
+}
+@media only screen and (max-width: 575px) {
+  html {
+      font-size: 46.87%;
+  }
+  #homes .container .text1{
+    font-size: 40px;
+  }
+  #homes .container .text2{
+    font-size: 30px;
+  }
+  header {
+      padding: 1rem 3rem;
+  }
+  
+  nav ul {
+      top: 65.18px;
+      height: calc(100vh - 65.18px);
+  }
+  nav ul li {
+    padding-top: 20px;
+}
+}
+
+#homes .container {
+  text-align: center;
+  position: fixed;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#homes .container span {
+  display: block;
+}
+
+#homes .text1 {
+  color: #41b879;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: text 2s ease;
+}
+
+#homes .text2 {
+  color: #41b879;
+  font-size: 30px;
+  font-family: Georgia, serif;
+}
+
+@keyframes text {
+  0% {
+      color: #41b879;
+      margin-bottom: -30px;
+  }
+
+  30% {
+    color: #41b879;
+      letter-spacing: 15px;
+      margin-bottom: -30px;
+  }
+
+  85% {
+      color: #41b879;
+      letter-spacing: 4px;
+      margin-bottom: -30px;
+  }
+}
+
+.footer {
+  height: 80vh;
+}

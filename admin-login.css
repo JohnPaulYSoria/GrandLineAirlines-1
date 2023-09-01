@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    transition: all 1s ease;
+}
+body{
+    background-color: #212121;
+    font-family: 'Poppins',sans-serif;
+    padding-top: 4%;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    border-top: 1px solid #41b879;
+    border-left: 1px solid #41b879;
+    border-bottom: 1px solid #41b879;
+    border-right: 1px solid #41b879;
+    margin: 10px auto;
+    width: 400px;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"]{
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #212121;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: transparent;
+    border: 1px solid #41b879;
+    transition: 0.5s ease;
+}
+.home-button{
+    margin-left: 120px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+}
+.home-button:hover{
+    background-color: transparent;
+    border: 1px solid #41b879;
+    transition: 0.5s ease;
+}
+@media (max-width: 768px){
+    body{
+        background-color: #212121;
+        font-family: 'Poppins',sans-serif;
+        padding-top: 4%;
+    }
+    .container{
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        margin: 10px auto;
+        width: 400px;
+        padding: 20px;
+    }
+    
+    h1{
+        text-align: center;
+        color: #fff;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label{
+        margin-bottom: 10px;
+        text-align: center;
+        color: #fff;
+    }
+    
+    input[type="text"],
+    input[type="password"]{
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    button {
+        background-color: #212121;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    button:hover{
+        background-color: transparent;
+        border: 1px solid #ffee00;
+        transition: 0.5s ease;
+    }
+    .home-button{
+        margin-left: 120px;
+    }
+    .home-button:hover{
+        background-color: transparent;
+        border: 1px solid #ffee00;
+        transition: 0.5s ease;
+    }
+}
