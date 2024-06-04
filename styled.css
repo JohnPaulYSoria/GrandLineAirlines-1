@@ -11,7 +11,7 @@ body {
   display: flex;
   margin: 0;
   min-height: 100vh;
-  background-image: url("DashboardBG.png");
+  background-image: url("./DashboardBG.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
